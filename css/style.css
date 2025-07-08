@@ -1,0 +1,82 @@
+body {
+    background-image: url("../img/bg.jpg");
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    font-family: "papyrus", fantasy;
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    background-color: #72f176;
+    border-radius: 4px;
+    padding: 12px 28px;
+    font-size: 16px;
+    border: 1px solid black;
+}
+button:hover {
+    background-color: white;
+    color: #72f176;
+  }
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: "papyrus", fantasy;
+    margin-bottom: 50px;
+    
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    margin-top: -130px;
+    cursor: url(../img/hammer1.png), auto;
+}
+
+.container:active {
+    cursor: url(../img/hammer2.png), auto;
+}
+
+.tanah {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.tanah::after{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(../img/grass.png) bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    bottom: -8px;
+}
+
+.bear {
+    width: 100%;
+    height: 100%;
+    background: url(../img/grizz.png) bottom center no-repeat;
+    background-size: 50%;
+    position: absolute;
+    top: 100px;
+    transition: top 0.3s;
+}
+
+.tanah.muncul .bear {
+    top: -15px;
+}
+
+p {
+    text-align: center;
+    margin-top: -180px;
+}
