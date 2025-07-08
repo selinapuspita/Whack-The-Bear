@@ -63,6 +63,7 @@ function pukul() {
     skor++;
     score.textContent = skor;
     this.parentNode.classList.remove('muncul');
+    pop.currentTime = 0;
     pop.play();
 }
 
